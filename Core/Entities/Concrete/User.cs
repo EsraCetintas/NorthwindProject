@@ -13,6 +13,22 @@ namespace Core.Entities.Concrete
         public byte[] PasswordSalt { get; set; }
         public byte[] PasswordHash { get; set; }
         public bool Status { get; set; }
+
+        public User(int id, string firstName, string lastName, string email, byte[] passwordSalt, byte[] passwordHash, bool status)
+        {
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+            PasswordSalt = passwordSalt;
+            PasswordHash = passwordHash;
+            Status = status;
+        }
+
+        public User()
+        {
+
+        }
     }
 
 }
